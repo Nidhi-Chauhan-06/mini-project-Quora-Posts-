@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    
+    <h2>Edit Your Post</h2>
+    <p> post id:<%=post.id%></p>
+    <p>post username:@<%=post.username%></p>
+    <form action="/posts/<%=post.id%>?_method=PATCH" method="post">
+
+        <textarea name="content" id="" rows="5" cols="35" > <%=post.content%></textarea>
+        <button>submit</button>
+    </form>
+</body>
+</html>
+
+<!-- // html means client only post ya get req hi send kr skti hai but patch put delete use krne ke liyr ek pakage method-override ka use krte hai usme bhi query wala............ -->
